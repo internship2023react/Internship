@@ -1,46 +1,3 @@
-// class Pizza {
-//   constructor(name, ingredients) {
-//     this.name = name;
-//     this.ingredients = ingredients;
-//   }
-// }
-
-// class PizzaRestaurant {
-//   constructor() {
-//     this.pizzas = [];
-//   }
-
-//   preparePizza(name, ingredients) {
-//     if (this.hasPizza(name)) {
-//       throw new Error("Pizza name already exists");
-//     }
-
-//     if (ingredients.length === 0) {
-//       throw new Error("Invalid ingredients");
-//     }
-
-//     const recognizedIngredients = ["Tomato", "Mozzarella", "Basil", "Pepperoni", "Pineapple", "Ham", "Onions"];
-//     const unrecognizedIngredients = ingredients.filter(ingredient => !recognizedIngredients.includes(ingredient));
-//     if (unrecognizedIngredients.length > 0) {
-//       throw new Error("Invalid ingredients");
-//     }
-
-//     const pizza = new Pizza(name, ingredients);
-//     this.pizzas.push(pizza);
-//     return pizza;
-//   }
-  
-
-//   hasPizza(name) {
-//     const lowerCaseName = name.toLowerCase().trim();
-//     return this.pizzas.some((pizza) => pizza.name.toLowerCase().trim() === lowerCaseName);
-//   }
-
-//   getPizzaCount() {
-//     return this.pizzas.length;
-//   }
-// }
-
 class Pizza {
   constructor(name, ingredients) {
     this.name = name;
@@ -51,7 +8,15 @@ class Pizza {
 class PizzaRestaurant {
   constructor() {
     this.pizzas = [];
-    this.recognizedIngredients = ["Tomato", "Mozzarella", "Basil", "Pepperoni", "Pineapple", "Ham", "Onions"];
+    this.recognizedIngredients = [
+      "Tomato",
+      "Mozzarella",
+      "Basil",
+      "Pepperoni",
+      "Pineapple",
+      "Ham",
+      "Onions",
+    ];
   }
 
   preparePizza(name, ingredients) {
@@ -75,7 +40,9 @@ class PizzaRestaurant {
   }
 
   hasPizza(name) {
-    return this.pizzas.some((pizza) => pizza.name.toLowerCase() === name.toLowerCase().trim());
+    return this.pizzas.some(
+      (pizza) => pizza.name.toLowerCase() === name.toLowerCase().trim()
+    );
   }
 
   getPizzaCount() {

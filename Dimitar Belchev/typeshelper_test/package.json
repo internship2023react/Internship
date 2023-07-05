@@ -1,0 +1,14 @@
+{
+  "name": "typeshelper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "TypesHelper.test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
+}
